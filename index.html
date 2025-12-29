@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Binary Search Iteratif vs Rekursif</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fb;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .title-box {
+            background: #4169e1;
+            padding: 20px;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            width: 350px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-right: 15px;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 18px;
+            background: #4169e1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #365ad8;
+        }
+
+        #errorBox {
+            display: none;
+            background: #ffdddd;
+            color: #b30000;
+            padding: 12px;
+            border-left: 5px solid #ff4d4d;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="title-box">
+        Perbandingan Binary Search Iteratif dan Rekursif pada Data Terurut
+    </div>
+
+    <label>Masukkan Data Terurut (pisahkan dengan koma):</label><br>
+    <input type="text" id="userData" placeholder="contoh: 1,2,3,4,5"><br>
+
+    <br>
+    
+    <label>Nilai yang dicari:</label><br>
+    <input type="number" id="target" placeholder="contoh: 5">
+
+
+    <br>
+
+    <button onclick="runTest()">Jalankan Pencarian</button>
+    <button onclick="addToChart()">Tambahkan ke Grafik</button>
+
+    <div id="errorBox"></div>
+
+    <h3>Hasil:</h3>
+    <p id="iterativeResult"></p>
+    <p id="recursiveResult"></p>
+
+    <h3>Grafik Running Time</h3>
+    <canvas id="runtimeChart" width="600" height="300"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
